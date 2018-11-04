@@ -1,0 +1,13 @@
+# IDE/Text editor settings
+.vs/
+*.filters
+*.user
+
+# Build files
+Debug/
+Release/
+*.dll
+
+# Library files
+engine/
+libs/
