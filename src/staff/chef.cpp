@@ -24,6 +24,10 @@ void Chef::render(int camX, int camY) {
 	texture->render(coords.x - camX, coords.y - camY);
 }
 
+void Chef::renderMapDebug(int camX, int camY) {
+
+}
+
 void Chef::update(Game& game) {
 
 }

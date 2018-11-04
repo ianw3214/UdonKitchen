@@ -13,6 +13,8 @@ public:
 	void update(Game& game) override;
 	void render(int camX, int camY) override;
 
+	void renderMapDebug(int camX, int camY) override;
+
 private:
 	static Texture * texture;
 };

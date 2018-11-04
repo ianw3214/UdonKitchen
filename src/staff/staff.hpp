@@ -22,6 +22,9 @@ public:
 	inline int getX() const { return x; }
 	inline int getY() const { return y; }
 
+	// ----- Debugging methods -----
+	virtual void renderMapDebug(int camX, int camY) = 0;
+
 protected:
 	// The coordinates of the staff in grid coordinates
 	int x, y;

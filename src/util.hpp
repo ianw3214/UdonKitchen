@@ -2,9 +2,35 @@
 
 #include "QcEngine.hpp"
 
+#define MOVE_TIME	200
+
 // TODO: move variable definition to somewhere more global
 #define BASE_TILE_WIDTH 64
 #define BASE_TILE_HEIGHT 32
+
+// struct to keep track of path when pathfinding
+struct Path {
+	std::vector<Vec2> path;
+	int cost;
+	int score;
+
+	void operator=(const Path& other) {
+		path = other.path;
+		cost = other.cost;
+		score = other.score;
+	}
+};
+
+// equality operator for paths to compare if 2 paths are the same
+inline bool operator==(const Path& p1, const Path& p2) {
+	return p1.path == p2.path && p1.score == p2.score && p1.cost == p2.cost;
+}
+
+// temporary equality operator for vec2
+// TODO: implement in engine
+inline bool operator== (const Vec2& v1, const Vec2& v2) {
+	return v1.x == v2.x && v1.y == v2.y;
+}
 
 // helper function to convert from top down to iso coords
 //  takes in coords as Tile coords, e.g. (1, 1) or (-3, 5) instead of pixel coords

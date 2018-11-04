@@ -12,6 +12,8 @@ public:
 	void render(int camX, int camY) override;
 	void update() override;
 
+	int num_orders;
+
 private:
 
 	static Texture * texture;
