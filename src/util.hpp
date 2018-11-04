@@ -2,7 +2,7 @@
 
 #include "QcEngine.hpp"
 
-#define MOVE_TIME	200
+#define MOVE_TIME	100
 
 // TODO: move variable definition to somewhere more global
 #define BASE_TILE_WIDTH 64

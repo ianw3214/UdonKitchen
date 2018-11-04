@@ -241,7 +241,8 @@ bool Waiter::handleCustomerOrderEvent(Game & game) {
 			// Setup the event to play once the waiter reaches its destination
 			nextEvent = new OrderInEvent{
 				EventType::ORDER_IN,
-				event->customer
+				event->customer,
+				targetCounter
 			};
 			delete game.popEvent(EventType::CUSTOMER_ORDER);
 			return true;

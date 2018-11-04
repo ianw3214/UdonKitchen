@@ -41,4 +41,5 @@ struct CustomerOrderEvent : public Event {
 
 struct OrderInEvent : public Event {
 	Customer * customer;
+	Counter * counter;
 };

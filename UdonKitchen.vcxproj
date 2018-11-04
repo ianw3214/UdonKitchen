@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="src\customer.hpp" />
     <ClInclude Include="src\event.hpp" />
+    <ClInclude Include="src\foods.hpp" />
     <ClInclude Include="src\furniture\chair.hpp" />
     <ClInclude Include="src\furniture\counter.hpp" />
     <ClInclude Include="src\furniture\furniture.hpp" />

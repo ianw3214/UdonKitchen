@@ -10,7 +10,7 @@
 // This function can only be used within Game class methods
 #define MAP_INDEX(x, y) ((y) * map_size + (x))
 
-#define MAX_CUSTOMERS		3
+#define MAX_CUSTOMERS		1
 
 class Furniture;
 class Staff;

@@ -232,6 +232,12 @@ Vec2 Game::findEmptyNearSquare(Vec2 target, int range, bool square, int threshol
 void Game::handleCustomerSpawns() {
 	// For now, set the logic to spawn a customer if there are none
 	if (customers.size() < MAX_CUSTOMERS && positionValid(Vec2(entrance_x, entrance_y))) {
+		// Only spawn customers in random intervals
+		if (customers.size() > 0) {
+			if (!(rand() % 100) == 1) {
+				return;
+			}
+		}
 		Customer * newCustomer = new Customer(entrance_x, entrance_y);
 		customers.push_back(newCustomer);
 		// Add a customer arrived event
